@@ -11,7 +11,9 @@ class Battleship_game:
         #Create player board
         self.player_board = [["" for _ in range(self.board_size)] for _ in range (self.board_size)]
         self.computer_board = [["" for _ in range(self.board_size)] for _ in range(self.board_size)]
-
+        #Create boards for guesses
+        self.player_guess = [["" for _ in range(self.board_size)] for _ in range(self.board_size)]
+        self.computer_guess = [["" for _ in range(self.board_size)] for _ in range(self.board_size)]
 
     #Function to print game board
     def print_board(self, board):
