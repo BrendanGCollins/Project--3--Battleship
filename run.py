@@ -87,7 +87,7 @@ class Battleship_game:
                         board[row + i][col] = ship
                     placed = True
     
-    def player_guess(self):
+    def player_ship_guess(self):
         """
         Allows the player to guess computer ship positions
         """
@@ -96,6 +96,6 @@ class Battleship_game:
         print("you have 20 guesses to find all the ships")
         print("enter your guesses in the format: row col(e.g. 2 3)")
     
-    #Inital guess count and set maximum guesses allowed
-    guess_count = 0
-    max_guesses = 20
+        #Inital guess count and set maximum guesses allowed
+        guess_count = 0
+        max_guesses = 20
