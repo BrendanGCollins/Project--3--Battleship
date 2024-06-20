@@ -4,7 +4,7 @@ import random
 class Battleship_game:
     def __init__(self):
         """
-        Initialize the game.
+        Initialise the game.
         Set game board size, add ships and their sizes, create boards for the computer and player guesses,
         and place ships on the computer's board.
         """
@@ -86,3 +86,12 @@ class Battleship_game:
                     for i in range(size):
                         board[row + i][col] = ship
                     placed = True
+    
+    def player_guess(self):
+        """
+        Allows the player to guess computer ship positions
+        """
+        #Introduction to the game
+        print("Welcome to Battleship!")
+        print("you have 20 guesses to find all the ships")
+        print("enter your guesses in the format: row col(e.g. 2 3)")
