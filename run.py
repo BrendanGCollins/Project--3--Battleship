@@ -16,7 +16,9 @@ class Battleship_game:
         self.player_guess = [["" for _ in range(self.board_size)] for _ in range(self.board_size)]
 
     def print_board(self, board):
-        #Goes through each row on the board
+        """
+        Print the game board.
+        """
         for row in board:
             #Empty string to build current row
             row_string =""
@@ -47,21 +49,37 @@ class Battleship_game:
         placed = False
         #Repeat until the ships are successfully placed
         while not placed:
-            #Randomly choose horizontal or vertical orientation
+            # Randomly choose horizontal or vertical orientation
             orientation = random.choice(["H", "V"])
-            if orientation =="H":
-                #Randomly select a row and starting column
-                row = random.randint(0, self.board_size -1)
-                col = random.randint(0, self.board_size -size)
-                #Check if space is free
+            if orientation == "H":
+                # Randomly select a row and starting column
+                row = random.randint(0, self.board_size - 1)
+                col = random.randint(0, self.board_size - size)
+                # Check if space is free
                 space_free = True
                 for i in range(size):
-                    if board[row][col + i] !="":
+                    if board[row][col + i] != "":
                         space_free = False
-                        #Exit loop once a cell that is not empty if found
+                        # Exit loop once a cell that is not empty is found
                         break
-                #Place ship if there is a free space
+                # Place ship if there is a free space
                 if space_free:
                     for i in range(size):
                         board[row][col + i] = ship
+                    placed = True
+            else:
+                # Random selection for vertical orientation
+                row = random.randint(0, self.board_size - size)
+                col = random.randint(0, self.board_size - 1)
+                # Check if space is free
+                space_free = True
+                for i in range(size):
+                    if board[row + i][col] != "":
+                        space_free = False
+                        # Exit loop once a cell that is not empty is found
+                        break
+                # Place ship if there is a free space
+                if space_free:
+                    for i in range(size):
+                        board[row + i][col] = ship
                     placed = True
