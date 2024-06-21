@@ -204,5 +204,25 @@ On the left-hand sidebar, in the Code and automation section, select Pages.
 
 - The link to the repository can be found here: https://brendangcollins.github.io/Project--3--Battleship/
 
+### Heroku
+- Sign up for a Heroku account.
+
+- Ensure you have a 'requirements.txt' file containg required libraries in your project.
+
+- Log in to Heroku
+
+- Create a new Heroku application
+
+- Choose an app name and choose your region
+
+- Add config var in settings. 'KEY = PORT' and 'VALUE = 8000'
+
+- Add buildbacks in settings. 'heroku/python' and 'heroku/nodejs', must be in that order
+
+- Connect your github repository to heroku
+
+- Click on build and wait for the app to be built
+
+- the link to the app can be found here: https://battleship-project-3-a2a7414964f9.herokuapp.com/
 
 
