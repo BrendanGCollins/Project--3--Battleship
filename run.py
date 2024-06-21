@@ -121,6 +121,8 @@ class Battleship_game:
                 continue
             try:
                 row, col = int(guess[0]), int(guess[1])
+                if (row == 0 and guess[0] != "0") or (col == 0 and guess[1] !="0"):
+                    raise ValueError #Prevents leading 0 error i.e 01
             except ValueError:
                 print("Invalid input. Please enter in the format: row col")
                 continue
