@@ -34,5 +34,151 @@ Battleship is a classic guessing game where a player tries to sink all the compu
  - Player vs Computer
     - Add a player board and allow you to play against the computer and see if you can sink all their ships before it sinks yours.
 
+## Testing
+  -  The Battleship game was thoroughly tested to ensure all features work as expected and does not contain any bugs. 
+  - The code was passed through a linter i.e. flake8 on vs code and no errors were found. Screenshot included below.
+
+## Manual Testing
+
+<table>
+  <tr>
+        <th>Action</th>
+        <th>Expected Behaviour</th>
+        <th>Pass or Fail</th>
+        <th>Notes</th>
+  </tr>
+    <tr>
+        <td>Launch Game on Heroku</td>
+        <td>Game loads with instructions and remainin guesses. Input shown for player guess</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+      <tr>
+        <td>Restart game by clicking run programme on Heroku</td>
+        <td>Game board is reset, ships get new random location and guesses reset</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+    <tr>
+        <td>Check for random placement of ships</td>
+        <td>Ships appear randomly both horizontally and vertically</td>
+        <td>Pass</td>
+        <td>Played game repeatedly and got different layouts each time</td>
+  </tr>
+  <tr>
+        <td>Enter valid guess</td>
+        <td>Game accepts the guess and marks hit or miss</td>
+        <td>Pass</td>
+        <td>Tested with input "1 2"</td>
+  </tr>
+    <tr>
+        <td>Enter guess with no space between row and column</td>
+        <td>Game rejects the guess and prompts for valid input. Guess counter does not change</td>
+        <td>Pass</td>
+        <td>Tested with input "33"</td>
+  </tr>
+  <tr>
+        <td>Enter invlaid numerical guess</td>
+        <td>Game rejects the guess and prompts for valid input. Guess counter does not change</td>
+        <td>Pass</td>
+        <td>Tested with input "6 0"</td>
+  </tr>
+  <tr>
+        <td>Enter guess with a leading 0</td>
+        <td>Game rejects the guess and prompts for valid input. Guess counter does not change</td>
+        <td>Pass</td>
+        <td>Tested with 6 00</td>
+  </tr>
+  <tr>
+        <td>Enter letters instead of valid guess</td>
+        <td>Game rejects the guess and prompts for valid input. Guess counter does not change</td>
+        <td>Pass</td>
+        <td>Tested with a g</td>
+  </tr>
+  <tr>
+        <td>Repeat a guess on the same cell</td>
+        <td>Game indicates that the cell has already been guessed. Guess counter does not change</td>
+        <td>Pass</td>
+        <td>Tested with 3 3, worked corectly first guess and notified that it was already guessed on second attempt</td>
+  </tr>
+  <tr>
+        <td>Hit a ship</td>
+        <td>Game board changes to mark where your hit registered. Guess counter updates</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+    <tr>
+        <td>Miss a ship</td>
+        <td>Game board changes to mark where your shot missed. Guess counter updates</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>Win the game by sinking all ships</td>
+        <td>Game displays a winning message</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>Lose the game by using all guesses</td>
+        <td>Game displays a game over message</td>
+        <td>Pass</td>
+        <td>Tested my making 20 guesses and not hitting all 14 ship cells</td>
+  </tr>
+  <tr>
+        <td>Verify color coding of hits</td>
+        <td>Hits are displayed in green</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>Verify color coding of misses</td>
+        <td>Misses are displayed in red</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>Verify color coding of unknown cells</td>
+        <td>Unknown cells are displayed in blue</td>
+        <td>pass</td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>Verify color coding of winning message</td>
+        <td>Winner message displayed in green</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>Verify color coding of game over message</td>
+        <td>Game over message displayed in red</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>Verify remaining guesses are updating correctly</td>
+        <td>Game shows the number of remaining guesses each turn, updates after each miss or hit.</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>Check board display after guess</td>
+        <td>Board updates to show hit or miss</td>
+        <td>Pass</td>
+        <td></td>
+  </tr>
+  <tr>
+        <td>Test for ships overlapping</td>
+        <td>Ships do not overlap</td>
+        <td>Pass</td>
+        <td>Played through multiple times, ships always within game board and did not overlap</td>
+  </tr>
+  <tr>
+        <td>Check final board display on game over</td>
+        <td>Final board is displayed with all guesses shown</td>
+        <td>pass</td>
+        <td></td>
+  </tr>
+</table>
 
 
