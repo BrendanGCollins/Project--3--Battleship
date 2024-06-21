@@ -110,6 +110,9 @@ class Battleship_game:
         hits = 0
 
         while guess_count < max_guesses:
+            #Show player remaining guesses
+            print(f"{max_guesses - guess_count} guesses left")
+
             #Ask for player input
             guess = input("Enter your guess(row col):").split()
             #If you enter more than two characters you get an invalid message
