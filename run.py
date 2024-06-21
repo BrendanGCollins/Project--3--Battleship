@@ -1,5 +1,5 @@
 import random
-from colorama import init, Fore, Style
+from colorama import init, Fore
 
 #Initialise colorama
 init(autoreset=True)
@@ -35,13 +35,13 @@ class Battleship_game:
             for cell in row:
                 if cell == "":
                     #Empty cells marked as ' UNKNOWN '
-                    row_string += " UNKNOWN "
+                    row_string += Fore.BLUE + " UNKNOWN "
                 elif cell == "H":
                     #Hits marked as ' HIT '
-                    row_string +=" HIT "
+                    row_string += Fore.GREEN +" HIT "
                 elif cell == "M":
                     #Misses marked as ' MISS '
-                    row_string += " MISS "
+                    row_string += Fore.RED + " MISS "
                 else:
                     #If none of above add the letter of the ship on the cell.
                     row_string += f" {cell} "
@@ -154,9 +154,9 @@ class Battleship_game:
 
         #Loop to check hitting ships/ running out of guesses
         if hits == self.total_ship_parts:
-            print("Winner! You sunk all the ships")
+            print(Fore.GREEN + "Winner! You sunk all the ships")
         else:
-            print("Game over! You ran out of guesses")
+            print(Fore.RED + "Game over! You ran out of guesses")
             #Show the final game board to the player
             self.print_board(self.player_guess)
 
