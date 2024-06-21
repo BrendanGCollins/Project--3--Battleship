@@ -24,3 +24,15 @@ Battleship is a classic guessing game where a player tries to sink all the compu
 - End of Game Message
     - The game tracks a players total guesses. Once you reach 20 completed guesses a message will appear to let you know that you lost. If you manage to sink all ships before you run out of guesses a winning message will appear instead.
 
+### Features Left to Implement
+ - Difficulty Levels
+    -  Add multiple difficulty levels (e.g. Easy, Medium, Hard) with different numbers of ships, different board sizes and different number of guesses allowed.
+
+ - High Score System
+    - Track how many guesses it takes a player to sink all ships and add a leaderboard.
+
+ - Player vs Computer
+    - Add a player board and allow you to play against the computer and see if you can sink all their ships before it sinks yours.
+
+
+
