@@ -99,7 +99,8 @@ class Battleship_game:
         print("Welcome to Battleship!")
         print("you have 20 guesses to find all the ships")
         print("enter your guesses in the format: row col(e.g. 2 3)")
-    
+        print("Guesses range from 0 to 4 for both row and column")
+
         #Inital guess count and set maximum guesses allowed
         guess_count = 0
         max_guesses = 20
