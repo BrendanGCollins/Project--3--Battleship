@@ -21,6 +21,8 @@ class Battleship_game:
         #Place ships on computers board
         for ship , size in self.ships.items():
             self.place_ships(self.computer_board, ship, size)
+        #Calculate total ship parts
+        self.total_ship_parts = sum(self.ships.values())
 
     def print_board(self, board):
         """
@@ -146,6 +148,12 @@ class Battleship_game:
 
             #Add 1 to guess count after each guess
             guess_count +=1
+
+        #Loop to check hitting ships/ running out of guesses
+        if hits == self.total_ship_parts:
+            print("Winner! You sunk all the ships")
+        else:
+            print("Game over! You ran out of guesses")
 
 if __name__ == "__main__":
     #Create game and start player's guesses
