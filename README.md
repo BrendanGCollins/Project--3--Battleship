@@ -185,4 +185,24 @@ Battleship is a classic guessing game where a player tries to sink all the compu
 
 No bugs were found at the end of this project
 
+## Deployment
+
+### Github
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+- Go to the Settings tab of your GitHub repo.
+On the left-hand sidebar, in the Code and automation section, select Pages.
+- Set sourse to 'Deploy from Branch'.
+
+- Select main branch
+- Make sure your folder is set to / (root)
+
+- Click on save
+
+- Wait a few minutes for the site to update then go back to the main page by clicking "code" in the top left of the screen.
+
+- Click on "Deployments" in the bottom right of the sceen.
+
+- The link to the repository can be found here: https://brendangcollins.github.io/Project--3--Battleship/
+
+
 
