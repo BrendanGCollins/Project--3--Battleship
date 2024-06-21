@@ -104,6 +104,9 @@ class Battleship_game:
         #Inital guess count and set maximum guesses allowed
         guess_count = 0
         max_guesses = 20
+        #Inital hits count
+        hits = 0
+
         while guess_count < max_guesses:
             #Ask for player input
             guess = input("Enter your guess(row col):").split()
