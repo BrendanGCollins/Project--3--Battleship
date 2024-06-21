@@ -103,3 +103,15 @@ class Battleship_game:
         #Inital guess count and set maximum guesses allowed
         guess_count = 0
         max_guesses = 20
+        while guess_count < max_guesses:
+            #Ask for player input
+            guess = input("Enter your guess(row col):").split()
+            #If you enter more than two characters you get an invalid message
+            if len(guess) != 2:
+                print("Invalid input. Please enter in the format: row col")
+                continue
+            try:
+                row, col = int(guess[0]), int(guess[1])
+            except ValueError:
+                print("Invalid input. Please enter in the format: row col")
+                continue
