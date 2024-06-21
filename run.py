@@ -154,6 +154,8 @@ class Battleship_game:
             print("Winner! You sunk all the ships")
         else:
             print("Game over! You ran out of guesses")
+            #Show the final game board to the player
+            self.print_board(self.player_guess)
 
 if __name__ == "__main__":
     #Create game and start player's guesses
