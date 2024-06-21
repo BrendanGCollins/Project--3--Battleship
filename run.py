@@ -122,6 +122,22 @@ class Battleship_game:
                 print("Invalid input. Please enter valid row and column within board limits")
                 continue
 
+            #Check if guess is a hit or miss
+            if self.computer_board[row][col] != "":
+                #If cell contains part of ship it is a hit
+                print("Hit!")
+                #Mark player board with 'H' for hit
+                self.player_guess[row][col] = "H"
+                #Remove  from computer board to prevent hitting same part again
+                self.computer_board[row][col] = ""
+                #Add one to hit count
+                hits += 1
+            else:
+                #If guess is an empty cell then it is a miss
+                print("Miss!")
+                #Mark player guess board with a 'M' for miss
+                self.player_guess[row][col] = "M"
+
 if __name__ == "__main__":
     #Create game and start player's guesses
     game = Battleship_game()
