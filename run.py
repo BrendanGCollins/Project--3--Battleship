@@ -120,3 +120,8 @@ class Battleship_game:
             if row < 0 or row >= self.board_size or col < 0 or col >= self.board_size:
                 print("Invalid input. Please enter valid row and column within board limits")
                 continue
+
+if __name__ == "__main__":
+    #Create game and start player's guesses
+    game = Battleship_game()
+    game.player_ship_guess()
