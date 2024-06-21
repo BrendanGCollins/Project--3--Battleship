@@ -4,22 +4,26 @@ from colorama import init, Fore
 # Initialise colorama
 init(autoreset=True)
 
+
 # Game class
 class BattleshipGame:
     def __init__(self):
         """
         Initialise the game.
-        Set game board size, add ships and their sizes, create boards for the computer and player guesses,
+        Set game board size, add ships and their sizes,
+        create boards for the computer and player guesses,
         and place ships on the computer's board.
         """
         self.board_size = 5
         # Add ships and their size
-        self.ships = {"A": 2, "B": 3, "C": 4, "D":5}
-        self.computer_board = [["" for _ in range(self.board_size)] for _ in range(self.board_size)]
+        self.ships = {"A": 2, "B": 3, "C": 4, "D": 5}
+        self.computer_board = [["" for _ in range(self.board_size)]
+                               for _ in range(self.board_size)]
         # Create boards for guesses
-        self.player_guess = [["" for _ in range(self.board_size)] for _ in range(self.board_size)]
+        self.player_guess = [["" for _ in range(self.board_size)]
+                             for _ in range(self.board_size)]
         # Place ships on computers board
-        for ship , size in self.ships.items():
+        for ship, size in self.ships.items():
             self.place_ships(self.computer_board, ship, size)
         # Calculate total ship parts
         self.total_ship_parts = sum(self.ships.values())
@@ -30,7 +34,7 @@ class BattleshipGame:
         """
         for row in board:
             # Empty string to build current row
-            row_string =""
+            row_string = ""
             # Goes through each cell on the board
             for cell in row:
                 if cell == "":
@@ -92,7 +96,7 @@ class BattleshipGame:
                     for i in range(size):
                         board[row + i][col] = ship
                     placed = True
-    
+
     def player_ship_guess(self):
         """
         Allows the player to guess computer ship positions
@@ -121,18 +125,27 @@ class BattleshipGame:
                 continue
             try:
                 row, col = int(guess[0]), int(guess[1])
-                if (row == 0 and guess[0] != "0") or (col == 0 and guess[1] !="0"):
-                    raise ValueError # Prevents leading 0 error, e.g. 01
+                if (
+                    (row == 0 and guess[0] != "0") or
+                    (col == 0 and guess[1] != "0")
+                ):
+                    raise ValueError  # Prevents leading 0 error, e.g. 01
             except ValueError:
-                print("Invalid input. Please enter in the format: row col")
+                print("Invalid input. Please enter in the format: "
+                      "row col")
                 continue
 
             # Check if guess is within the limits of the game board
-            if row < 0 or row >= self.board_size or col < 0 or col >= self.board_size:
-                print("Invalid input. Please enter valid row and column within board limits")
+            if (
+                row < 0 or row >= self.board_size or
+                col < 0 or col >= self.board_size
+            ):
+                print("Invalid input. "
+                      "Please enter valid row and column "
+                      "within board limits")
                 continue
 
-            # Check if cell has already bee guessed
+            # Check if cell has already been guessed
             if self.player_guess[row][col] in ["H", "M"]:
                 print("You already guessed this cell")
                 continue
@@ -143,7 +156,7 @@ class BattleshipGame:
                 print("Hit!")
                 # Mark player board with 'H' for hit
                 self.player_guess[row][col] = "H"
-                # Remove  from computer board to prevent hitting same part again
+                # Remove from board to prevent re-hitting
                 self.computer_board[row][col] = ""
                 # Add one to hit count
                 hits += 1
@@ -152,7 +165,7 @@ class BattleshipGame:
                 print("Miss!")
                 # Mark player guess board with a 'M' for miss
                 self.player_guess[row][col] = "M"
-            
+
             # Print player board
             self.print_board(self.player_guess)
 
@@ -161,11 +174,12 @@ class BattleshipGame:
 
         # Loop to check hitting ships/ running out of guesses
         if hits == self.total_ship_parts:
-            print(Fore.GREEN + "Winner! You sunk all the ships")
+            print(Fore.GREEN + "Winner! You sunk all ships")
         else:
             print(Fore.RED + "Game over! You ran out of guesses")
             # Show the final game board to the player
             self.print_board(self.player_guess)
+
 
 if __name__ == "__main__":
     # Create game and start player's guesses
