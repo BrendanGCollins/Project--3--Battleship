@@ -140,6 +140,12 @@ class Battleship_game:
                 print("Miss!")
                 #Mark player guess board with a 'M' for miss
                 self.player_guess[row][col] = "M"
+            
+            # Print player board
+            self.print_board(self.player_guess)
+
+            #Add 1 to guess count after each guess
+            guess_count +=1
 
 if __name__ == "__main__":
     #Create game and start player's guesses
