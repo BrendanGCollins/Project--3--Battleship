@@ -181,4 +181,8 @@ Battleship is a classic guessing game where a player tries to sink all the compu
   </tr>
 </table>
 
+### Unfixed Bugs
+
+No bugs were found at the end of this project
+
 
