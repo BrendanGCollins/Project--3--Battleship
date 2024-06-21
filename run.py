@@ -5,7 +5,7 @@ from colorama import init, Fore
 init(autoreset=True)
 
 #Game class
-class Battleship_game:
+class BattleshipGame:
     def __init__(self):
         """
         Initialise the game.
@@ -132,6 +132,11 @@ class Battleship_game:
                 print("Invalid input. Please enter valid row and column within board limits")
                 continue
 
+            #Check if cell has already bee guessed
+            if self.player_guess[row][col] in ["H", "M"]:
+                print("You already guessed this cell")
+                continue
+
             #Check if guess is a hit or miss
             if self.computer_board[row][col] != "":
                 #If cell contains part of ship it is a hit
@@ -164,5 +169,5 @@ class Battleship_game:
 
 if __name__ == "__main__":
     #Create game and start player's guesses
-    game = Battleship_game()
+    game = BattleshipGame()
     game.player_ship_guess()
