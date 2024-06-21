@@ -1,4 +1,8 @@
 import random
+from colorama import init, Fore, Style
+
+#Initialise colorama
+init(autoreset=True)
 
 #Game class
 class Battleship_game:
