@@ -38,7 +38,7 @@ class BattleshipGame:
                     row_string += Fore.BLUE + " UNKNOWN "
                 elif cell == "H":
                     # Hits marked as ' HIT '
-                    row_string += Fore.GREEN +" HIT "
+                    row_string += Fore.GREEN + " HIT "
                 elif cell == "M":
                     # Misses marked as ' MISS '
                     row_string += Fore.RED + " MISS "
@@ -99,8 +99,8 @@ class BattleshipGame:
         """
         # Introduction to the game
         print("Welcome to Battleship!")
-        print("you have 20 guesses to find all the ships")
-        print("enter your guesses in the format: row col(e.g. 2 3)")
+        print("You have 20 guesses to find all the ships")
+        print("Enter your guesses in the format: row col(e.g. 2 3)")
         print("Guesses range from 0 to 4 for both row and column")
 
         # Inital guess count and set maximum guesses allowed
@@ -114,7 +114,7 @@ class BattleshipGame:
             print(f"{max_guesses - guess_count} guesses left")
 
             # Ask for player input
-            guess = input("Enter your guess(row col):").split()
+            guess = input("Enter your guess (row col):").split()
             # If you enter more than two characters you get an invalid message
             if len(guess) != 2:
                 print("Invalid input. Please enter in the format: row col")
@@ -122,7 +122,7 @@ class BattleshipGame:
             try:
                 row, col = int(guess[0]), int(guess[1])
                 if (row == 0 and guess[0] != "0") or (col == 0 and guess[1] !="0"):
-                    raise ValueError # Prevents leading 0 error i.e 01
+                    raise ValueError # Prevents leading 0 error, e.g. 01
             except ValueError:
                 print("Invalid input. Please enter in the format: row col")
                 continue
@@ -157,7 +157,7 @@ class BattleshipGame:
             self.print_board(self.player_guess)
 
             # Add 1 to guess count after each guess
-            guess_count +=1
+            guess_count += 1
 
         # Loop to check hitting ships/ running out of guesses
         if hits == self.total_ship_parts:
