@@ -115,3 +115,8 @@ class Battleship_game:
             except ValueError:
                 print("Invalid input. Please enter in the format: row col")
                 continue
+
+            #Check if guess is within the limits of the game board
+            if row < 0 or row >= self.board_size or col < 0 or col >= self.board_size:
+                print("Invalid input. Please enter valid row and column within board limits")
+                continue
