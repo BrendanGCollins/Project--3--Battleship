@@ -2,9 +2,7 @@
 
 Battleship is a classic guessing game where a player tries to sink all the computer's ships. This version is implemented in Python and can be played in the console. Unlike classic Battleship you only have 20 tries to sink the computer's fleet or you loose!
 
-<img src="assets/images/launch_screen.png>
-
-Launch screen of the game
+<img src="assets/images/launch_screen.png" alt="Launch screen of the game">
 
 ## Features
 
@@ -19,29 +17,23 @@ Launch screen of the game
 - Player Guesses
     - The player has 20 guesses to sink the computer's fleet of ships. Each guess provides feedback on if it was a hit or miss. The guess board is shown after each guess and the player is shown their remaining guesses.
 
-     <img src="assets/images/counter_update.png>
-     Counter updating after a valid guess
-
+     <img src="assets/images/counter_update.png" alt="Counter updating after a valid guess">
+     
 - Coloured Game Board
     - The game board uses colours to make this text based game more visually appealing. Green for hit, red for a miss. At the end of the game the winning message is displayed in green and the game over message in red.
 
-      <img src="assets/images/color_board.png>
-      Different colors used for visibility
+      <img src="assets/images/color_board.png" alt ="Different colors used for visibility">
 
 - Input Validation
     - Extensive validation for player input. All guesses must be in the correct format and within the game board. It also prevents guessing the same cell more than once and the guess count does not change unless a guess is entered correctly. If a user enters an invalid guess they will receive a message asking them to try again and reminding them of the correct format.
 
-    <img src="assets/images/input_validation.png>
-    
-    Game does not accept incorrect inputs
+    <img src="assets/images/input_validation.png" alt="Game not accepting incorrect inputs">  
 
 - End of Game Message
     - The game tracks a players total guesses. Once you reach 20 completed guesses a message will appear to let you know that you lost. If you manage to sink all ships before you run out of guesses a winning message will appear instead. The final game board is shown.
 
-    <img src="assets/images/game_over.png>
+    <img src="assets/images/game_over.png" alt="End of loosing game">
     
-    End of loosing game
-
 ### Features Left to Implement
  - Difficulty Levels
     -  Add multiple difficulty levels (e.g. Easy, Medium, Hard) with different numbers of ships, different board sizes and different number of guesses allowed.
