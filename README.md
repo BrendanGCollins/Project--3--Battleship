@@ -34,6 +34,21 @@ Battleship is a classic guessing game where a player tries to sink all the compu
  - Player vs Computer
     - Add a player board and allow you to play against the computer and see if you can sink all their ships before it sinks yours.
 
+
+## Game planning
+- Game was planned out to follow the below steps. Logic was then added to meet these requirments
+      - Initalise Game
+      - Randomly place ships horizontally and vertically. Within game board and with no overlapping
+      - Display game Instructions
+      - Loop until player sinks all ships or runs out of guesses
+            - Get player guess
+            - Valdidate input
+            - Check if hit or miss
+            - Prevent the same guess as counting twice
+            - Update board and guess counter
+            - Display updated guess board
+      - Display end of game message
+       
 ## Testing
   -  The Battleship game was thoroughly tested to ensure all features work as expected and does not contain any bugs. 
   - The code was passed through a linter i.e. flake8 on vs code and no errors were found. Screenshot included below.
