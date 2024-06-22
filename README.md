@@ -69,6 +69,8 @@ Battleship is a classic guessing game where a player tries to sink all the compu
   -  The Battleship game was thoroughly tested to ensure all features work as expected and do not contain any bugs. 
   - The code was passed through a linter i.e. flake8 on vs code and no errors were found. Screenshot included below.
 
+      <img src="assets/images/no_error.png" alt="no errors using flake8">
+
 ## Manual Testing
 
 <table>
