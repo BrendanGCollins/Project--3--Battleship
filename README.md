@@ -226,7 +226,7 @@ No bugs were found at the end of this project
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
 - Go to the Settings tab of your GitHub repo.
 On the left-hand sidebar, in the Code and automation section, select Pages.
-- Set sourse to 'Deploy from Branch'.
+- Set source to 'Deploy from Branch'.
 
 - Select main branch
 - Make sure your folder is set to / (root)
@@ -237,7 +237,7 @@ On the left-hand sidebar, in the Code and automation section, select Pages.
 
 - Click on "Deployments" in the bottom right of the sceen.
 
-- The link to the repository can be found here: https://brendangcollins.github.io/Project--3--Battleship/
+- The link for the source code can be found here: https://github.com/BrendanGCollins/Project--3--Battleship
 
 ### Heroku
 - Sign up for a Heroku account.
