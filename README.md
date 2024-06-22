@@ -48,6 +48,12 @@ Battleship is a classic guessing game where a player tries to sink all the compu
             - Update board and guess counter
             - Display updated guess board
       - Display end of game message
+
+## Libraries Used
+- Colorama library was used for this projet.
+      - It enhanced the user experience by making the game more visually appealing.
+      - It helps provide visual feedback letting a player distinguish between hits, misses and unknow cells.
+      - Examples of Colorama in use are in the screenshots above
        
 ## Testing
   -  The Battleship game was thoroughly tested to ensure all features work as expected and does not contain any bugs. 
