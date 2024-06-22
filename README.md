@@ -226,3 +226,13 @@ On the left-hand sidebar, in the Code and automation section, select Pages.
 - the link to the app can be found here: https://battleship-project-3-a2a7414964f9.herokuapp.com/
 
 
+
+## Credits 
+
+- https://www.w3schools.com/python/default.asp
+- https://stackoverflow.com/
+- https://www.youtube.com/watch?v=tF1WRCrd_HQ
+
+### Libraries  
+
+- Colorama library used. Has been added to 'requirements.txt'
