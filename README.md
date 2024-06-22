@@ -46,18 +46,20 @@ Battleship is a classic guessing game where a player tries to sink all the compu
 
 
 ## Game planning
-- Game was planned out to follow the below steps. Logic was then added to meet these requirments:
-      - Initalise Game
-      - Randomly place ships horizontally and vertically. Within game board and with no overlapping
-      - Display game Instructions
-      - Loop until player sinks all ships or runs out of guesses
-            - Get player guess
-            - Valididate input
-            - Check if hit or miss
-            - Prevent the same guess as counting twice
-            - Update board and guess counter
-            - Display updated guess board
-      - Display end of game message
+
+### Game was planned out to follow the below steps. Logic was then added to meet these requirments:
+- Initalise Game
+- Randomly place ships horizontally and vertically
+- Prevent overlapping of ships
+- Display game Instructions
+- Loop until player sinks all ships or runs out of guesses
+      - Get player guess
+      - Valididate input
+      - Check if hit or miss
+      - Prevent the same guess as counting twice
+      - Update board and guess counter
+      - Display updated guess board
+- Display end of game message
 
 ## Libraries Used
 - Colorama library was used for this projet.
