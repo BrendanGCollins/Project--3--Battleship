@@ -30,7 +30,7 @@ Battleship is a classic guessing game where a player tries to sink all the compu
     <img src="assets/images/input_validation.png" alt="Game not accepting incorrect inputs">  
 
 - End of Game Message
-    - The game tracks a players total guesses. Once you reach 20 completed guesses a message will appear to let you know that you lost. If you manage to sink all ships before you run out of guesses a winning message will appear instead. The final game board is shown.
+    - The game tracks a player's total guesses. Once you reach 20 completed guesses a message will appear to let you know that you lost. If you manage to sink all ships before you run out of guesses a winning message will appear instead. The final game board is shown.
 
     <img src="assets/images/game_over.png" alt="End of loosing game">
     
@@ -46,13 +46,13 @@ Battleship is a classic guessing game where a player tries to sink all the compu
 
 
 ## Game planning
-- Game was planned out to follow the below steps. Logic was then added to meet these requirments
+- Game was planned out to follow the below steps. Logic was then added to meet these requirments:
       - Initalise Game
       - Randomly place ships horizontally and vertically. Within game board and with no overlapping
       - Display game Instructions
       - Loop until player sinks all ships or runs out of guesses
             - Get player guess
-            - Valdidate input
+            - Valididate input
             - Check if hit or miss
             - Prevent the same guess as counting twice
             - Update board and guess counter
@@ -66,7 +66,7 @@ Battleship is a classic guessing game where a player tries to sink all the compu
       - Examples of Colorama in use are in the screenshots above
        
 ## Testing
-  -  The Battleship game was thoroughly tested to ensure all features work as expected and does not contain any bugs. 
+  -  The Battleship game was thoroughly tested to ensure all features work as expected and do not contain any bugs. 
   - The code was passed through a linter i.e. flake8 on vs code and no errors were found. Screenshot included below.
 
 ## Manual Testing
